@@ -1,0 +1,112 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+    background: #363333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+header {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #111, #1a1a1a);
+}
+
+.highlight {
+    color: #00adb5; /* Modern Teal */
+}
+
+/* Projects Grid */
+#projects {
+    padding: 4rem 10%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    border-bottom: 4px solid #00adb5;
+    transition: transform 0.3s;
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #00adb5; /* Your Modern Teal */
+    color: #1a1a1a; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.project-card a:hover {
+    background-color: #ffffff;
+    color: #00adb5;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    transform: translateX(-10px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 10%;
+    background: #101;
+}
+
+.image-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.project-img {
+    max-width: 100%;    /* Ensures it never goes wider than the card */
+    height: auto;       /* Keeps the original aspect ratio */
+    border-radius: 8px; /* Matches your card corners */
+    border: 2px solid #333; /* Adds a subtle frame */
+}
