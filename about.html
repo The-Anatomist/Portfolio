@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Teddy Indetie — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        .about-header {
+            padding: 3rem 10% 2rem;
+            background: linear-gradient(to bottom, #111, #1a1a1a);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .about-header p {
+            opacity: 0.85;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .slides-container {
+            max-width: 860px;
+            margin: 3.5rem auto 5rem;
+            padding: 0 5%;
+        }
+
+        .slide-card {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 3rem 2.5rem;
+            border-bottom: 5px solid var(--teal);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-card.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-number {
+            font-size: 0.85rem;
+            font-family: monospace;
+            color: var(--teal);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .slide-card h2 {
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+            color: var(--text);
+        }
+
+        .slide-card p {
+            font-size: 1.12rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .slide-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .slide-btn {
+            background: #1f1f1f;
+            border: 2px solid var(--teal);
+            color: var(--text);
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .slide-btn:hover {
+            background: var(--teal);
+            color: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        .slide-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .slide-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #444;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slide-dot.active {
+            background: var(--teal);
+            transform: scale(1.2);
+        }
+
+        .slide-hint {
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.5;
+            margin-top: 1rem;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <nav>
+        <div class="logo">Teddy Indetie</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">← Back to Portfolio</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="about-header">
+        <h1>About <span class="highlight">Teddy Indetie</span></h1>
+        <p>Explore my story, philosophy, Python journey, and vision through interactive slides.</p>
+    </header>
+
+    <main class="slides-container">
+        <!-- Slide 1 -->
+        <div class="slide-card active" data-slide="0">
+            <div class="slide-number">Slide 01 / 04 — Who I Am</div>
+            <h2>Passionate Builder & Python Enthusiast</h2>
+            <p>Hi! I'm Teddy Indetie, a dedicated developer and python enthusiast based in Nairobi. I love turning clean code into functional, elegant, and interactive digital experiences that solve real problems.</p>
+            <p>Whether it's scripting robust algorithms or crafting cinematic web portfolios, I approach every project with curiosity, dedication, and precision.</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide-card" data-slide="1">
+            <div class="slide-number">Slide 02 / 04 — The Journey</div>
+            <h2>From Python Scripts to Web Interfaces</h2>
+            <p>My coding journey started with core Python programming — building evaluation calculators, interactive game logic like Rock, Paper, Scissors, and exploring how backend logic can be translated into smooth user interfaces.</p>
+            <p>I believe in continuous learning, breaking down complex ideas into simple steps, and shipping clean, maintainable code.</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide-card" data-slide="2">
+            <div class="slide-number">Slide 03 / 04 — Design & Craft</div>
+            <h2>Cinematic Aesthetics & Real Audio</h2>
+            <p>Great code deserves stunning design. Inspired by high-performance environments and modern UI trends, I integrate custom animations, 3D tilt effects, floating particles, and real audio-reactive music players into my work.</p>
+            <p>Every detail is fine-tuned to ensure users don't just view a portfolio — they experience it.</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide-card" data-slide="3">
+            <div class="slide-number">Slide 04 / 04 — Vision & Future</div>
+            <h2>Looking Ahead & Collaborating</h2>
+            <p>As I continue expanding my open-source contributions and Python expertise, my goal is to build impactful tools, explore AI integration, and collaborate with passionate creators worldwide.</p>
+            <p>Thank you for exploring my portfolio! Let's connect and build something extraordinary together.</p>
+        </div>
+
+        <!-- Slide Controls -->
+        <div class="slide-controls">
+            <button class="slide-btn" id="prev-slide">← Previous</button>
+            <div class="slide-dots" id="slide-dots">
+                <span class="slide-dot active" data-index="0"></span>
+                <span class="slide-dot" data-index="1"></span>
+                <span class="slide-dot" data-index="2"></span>
+                <span class="slide-dot" data-index="3"></span>
+            </div>
+            <button class="slide-btn" id="next-slide">Next →</button>
+        </div>
+        <div class="slide-hint">Tip: Use your keyboard arrow keys (← / →) to navigate slides</div>
+    </main>
+
+    <footer>
+        <h2>Get In Touch</h2>
+        <p class="email-wrapper">
+            <a href="#" class="copy-email" data-email="t.indetie@gmail.com"><span class="__cf_email__" data-cfemail="83f7adeaede7e6f7eae6c3e4eee2eaefade0ecee">[email&#160;protected]</span></a>
+            <span class="copy-feedback">Click to copy</span>
+        </p>
+        <p>&copy; 2026 Teddy Indetie</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // ============================================
+        // ABOUT PAGE — INTERACTIVE SLIDES DECK
+        // ============================================
+        function initAboutSlides() {
+            const slides = document.querySelectorAll('.slide-card');
+            const dots = document.querySelectorAll('.slide-dot');
+            const prevBtn = document.getElementById('prev-slide');
+            const nextBtn = document.getElementById('next-slide');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            function goToSlide(index) {
+                if (index < 0) index = totalSlides - 1;
+                if (index >= totalSlides) index = 0;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                        if (typeof gsap !== 'undefined') {
+                            gsap.fromTo(slide, 
+                                { opacity: 0, y: 25 }, 
+                                { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
+                            );
+                        }
+                    }
+                });
+
+                dots.forEach((dot, i) => {
+                    dot.classList.remove('active');
+                    if (i === index) {
+                        dot.classList.add('active');
+                    }
+                });
+
+                currentIndex = index;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const idx = parseInt(dot.dataset.index);
+                    goToSlide(idx);
+                });
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    goToSlide(currentIndex - 1);
+                } else if (e.key === 'ArrowRight') {
+                    goToSlide(currentIndex + 1);
+                }
+            });
+
+            // Email copy on about page footer
+            const emailLink = document.querySelector('.copy-email');
+            if (emailLink) {
+                emailLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const email = this.dataset.email;
+                    
+                    navigator.clipboard.writeText(email).then(() => {
+                        const originalText = this.textContent;
+                        this.textContent = 'Copied!';
+                        this.style.color = '#00adb5';
+                        
+                        setTimeout(() => {
+                            this.textContent = originalText;
+                            this.style.color = '';
+                        }, 2000);
+                    });
+                });
+            }
+
+            console.log('%c[About Page] Interactive slides deck ready.', 'color:#00adb5');
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initAboutSlides);
+        } else {
+            initAboutSlides();
+        }
+    </script>
+
+    <!-- Extra effects and audio player -->
+    <script src="effects.js"></script>
+    <script src="ui-sounds.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for premium cinematic animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <nav>
+        <div class="logo">Teddy Indetie</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header id="about">
+        <!-- Hero Canvas for Python particles -->
+        <canvas id="hero-canvas"></canvas>
+        
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Teddy Indetie</span></h1>
+            <p>A passionate python enthusiast building simple and functional projects.</p>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project One -->
+            <div class="project-card" data-project="1">
+                <h3>Project One</h3>
+                <p>My journey in making my portfolio.</p>
+                <a href="project-1.html" class="view-btn" data-modal="modal-project1">View Code</a>
+                <div class="tech-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                </div>
+            </div>
+            
+            <!-- Project Two -->
+            <div class="project-card" data-project="2">
+                <h3>Project Two</h3>
+                <p>Another awesome project where I built a rock,paper scissors game.</p>
+                <a href="project-2.html" class="view-btn" data-modal="modal-rps">View Code</a>
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>JS</span>
+                    <span>Canvas</span>
+                </div>
+            </div>
+            
+            <!-- Project Three -->
+            <div class="project-card" data-project="3">
+                <h3>Project Three</h3>
+                <p>Building a calculator in python using the eval() function.</p>
+                <a href="project-3.html" class="view-btn" data-modal="modal-calculator">View Code</a>
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>Eval</span>
+                    <span>UI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- OTHER PROJECTS SECTION -->
+        <div class="other-projects">
+            <h3>Other Projects</h3>
+            <p>Explore more of my Python experiments, tools, and open-source contributions.</p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 1.2rem;">
+                <a href="https://github.com/The-Anatomist/" target="_blank" rel="noopener noreferrer" class="github-btn" style="margin-top: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>View All Projects on GitHub</span>
+                </a>
+                
+                <a href="about.html" class="github-btn about-me-btn" style="margin-top: 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <span>Read More About Me</span>
+                </a>
+            </div>
+            
+            <div class="github-note">
+                <span>@The-Anatomist</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Get In Touch</h2>
+        <p class="email-wrapper">
+            <a href="#" class="copy-email" data-email="t.indetie@gmail.com"><span class="__cf_email__" data-cfemail="f480da9d9a9091809d91b49399959d98da979b99">[email&#160;protected]</span></a>
+            <span class="copy-feedback">Click to copy</span>
+        </p>
+        <p>&copy; 2026 Your TIA</p>
+        
+        <!-- Optional premium contact form -->
+        <div class="contact-form">
+            <input type="text" placeholder="Your name" class="form-input">
+            <input type="email" placeholder="Your email" class="form-input">
+            <textarea placeholder="Message" class="form-input"></textarea>
+            <button class="form-submit">Send Message</button>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Project 1 Modal -->
+    <div id="modal-project1" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3>Project One — Portfolio</h3>
+            <p>Built with pure HTML, CSS and JavaScript. Here's a live snippet of the hero code:</p>
+            
+            <div class="code-block">
+                <pre><code>&lt;h1&gt;Hi, I'm &lt;span class="highlight"&gt;Teddy Indetie&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;A passionate python enthusiast...&lt;/p&gt;</code></pre>
+                <button class="copy-code-btn">Copy Code</button>
+            </div>
+            
+            <div class="modal-footer">
+                <a href="project-1.html" class="view-full-btn">View Full Project</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- RPS Game Modal -->
+    <div id="modal-rps" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3>Project Two — Rock Paper Scissors</h3>
+            <p class="game-subtitle">Play against the AI (Python logic ported to JS)</p>
+            
+            <div class="rps-game">
+                <div class="rps-score">
+                    <div>You: <span id="player-score">0</span></div>
+                    <div>AI: <span id="ai-score">0</span></div>
+                </div>
+                
+                <div class="rps-result" id="rps-result">Choose your move</div>
+                
+                <div class="rps-choices">
+                    <button class="rps-btn" data-choice="rock">✊ Rock</button>
+                    <button class="rps-btn" data-choice="paper">✋ Paper</button>
+                    <button class="rps-btn" data-choice="scissors">✌️ Scissors</button>
+                </div>
+                
+                <button class="rps-reset">Reset Score</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calculator Modal -->
+    <div id="modal-calculator" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3>Project Three — Python Calculator</h3>
+            <p class="game-subtitle">Powered by eval() • Same logic as the original Python version</p>
+            
+            <div class="calculator">
+                <div class="calc-display" id="calc-display">0</div>
+                <div class="calc-buttons">
+                    <button class="calc-btn" data-value="C">C</button>
+                    <button class="calc-btn" data-value="/">÷</button>
+                    <button class="calc-btn" data-value="*">×</button>
+                    <button class="calc-btn" data-value="-">−</button>
+                    
+                    <button class="calc-btn" data-value="7">7</button>
+                    <button class="calc-btn" data-value="8">8</button>
+                    <button class="calc-btn" data-value="9">9</button>
+                    <button class="calc-btn" data-value="+">+</button>
+                    
+                    <button class="calc-btn" data-value="4">4</button>
+                    <button class="calc-btn" data-value="5">5</button>
+                    <button class="calc-btn" data-value="6">6</button>
+                    <button class="calc-btn" data-value="=" style="grid-row: span 2;">=</button>
+                    
+                    <button class="calc-btn" data-value="1">1</button>
+                    <button class="calc-btn" data-value="2">2</button>
+                    <button class="calc-btn" data-value="3">3</button>
+                    
+                    <button class="calc-btn" data-value="0">0</button>
+                    <button class="calc-btn" data-value=".">.</button>
+                    <button class="calc-btn" data-value="back">⌫</button>
+                </div>
+                <div class="python-badge">Python eval() • Safe mode</div>
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // ============================================
+        // TEDDY INDETIE — PREMIUM PORTFOLIO JS
+        // Ultra-cinematic interactions inspired by Lando Norris
+        // ============================================
+
+        // Global variables
+        let gsapLoaded = typeof gsap !== 'undefined';
+
+        // ============================================
+        // 1. CUSTOM CURSOR (elegant ring + dot)
+        // ============================================
+        function initCustomCursor() {
+            const cursor = document.createElement('div');
+            cursor.className = 'custom-cursor';
+            document.body.appendChild(cursor);
+
+            const cursorDot = document.createElement('div');
+            cursorDot.className = 'cursor-dot';
+            cursor.appendChild(cursorDot);
+
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            // Smooth follow animation
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.15;
+                cursorY += (mouseY - cursorY) * 0.15;
+                
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Hover states for interactive elements
+            const interactiveElements = document.querySelectorAll('a, button, .project-card, .view-btn, .rps-btn, .calc-btn');
+            
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('cursor-hover');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('cursor-hover');
+                });
+            });
+
+            // Magnetic effect on buttons
+            const magneticElements = document.querySelectorAll('.view-btn, .form-submit, .rps-btn, .calc-btn');
+            magneticElements.forEach(el => {
+                el.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
+                    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 12;
+                    
+                    gsapLoaded ? gsap.to(this, { x: x, y: y, duration: 0.3, ease: "power2.out" }) 
+                               : this.style.transform = `translate(${x}px, ${y}px)`;
+                });
+                
+                el.addEventListener('mouseleave', function() {
+                    gsapLoaded ? gsap.to(this, { x: 0, y: 0, duration: 0.4, ease: "power2.out" }) 
+                               : this.style.transform = '';
+                });
+            });
+        }
+
+        // ============================================
+        // 2. HERO CANVAS — Floating Python Particles
+        // ============================================
+        function initHeroParticles() {
+            const canvas = document.getElementById('hero-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            let width = canvas.parentElement.offsetWidth;
+            let height = canvas.parentElement.offsetHeight;
+            let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+            function resizeCanvas() {
+                width = canvas.parentElement.offsetWidth;
+                height = canvas.parentElement.offsetHeight;
+                dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+                // Render at native pixel density, then scale back down via
+                // CSS so everything stays crisp on retina/high-DPI screens.
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const particles = [];
+            const particleCount = 72;
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                }
+                
+                reset() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.size = Math.random() * 2.8 + 0.8;
+                    this.speedX = (Math.random() - 0.5) * 0.35;
+                    this.speedY = (Math.random() - 0.5) * 0.35;
+                    this.opacity = Math.random() * 0.6 + 0.3;
+                    this.hue = 178; // Teal
+                }
+                
+                update(mouseX, mouseY) {
+                    this.x += this.speedX;
+                    this.y += this.speedY;
+                    
+                    // Gentle mouse attraction
+                    if (mouseX && mouseY) {
+                        const dx = mouseX - this.x;
+                        const dy = mouseY - this.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 160 && distance > 0) {
+                            this.x += dx * 0.015;
+                            this.y += dy * 0.015;
+                        }
+                    }
+                    
+                    // Wrap around edges
+                    if (this.x < 0) this.x = width;
+                    if (this.x > width) this.x = 0;
+                    if (this.y < 0) this.y = height;
+                    if (this.y > height) this.y = 0;
+                    
+                    // Subtle breathing
+                    this.opacity = Math.sin(Date.now() / 1200) * 0.15 + 0.55;
+                }
+                
+                draw() {
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    
+                    ctx.fillStyle = `hsla(178, 100%, 65%, ${this.opacity})`;
+                    ctx.fill();
+                    
+                    // Glow effect
+                    ctx.shadowBlur = 12;
+                    ctx.shadowColor = '#00adb5';
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            // Create particles
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            // ---- Drifting code glyphs (subtle "python enthusiast" flavor) ----
+            const glyphSymbols = ['{ }', '</>', '( )', ';', '#', '=>', '01', '00', 'def'];
+            const glyphParticles = [];
+            const glyphCount = 8;
+
+            class GlyphParticle {
+                constructor() { this.reset(true); }
+
+                reset(initial) {
+                    this.x = Math.random() * width;
+                    this.y = initial ? Math.random() * height : height + 24;
+                    this.text = glyphSymbols[Math.floor(Math.random() * glyphSymbols.length)];
+                    this.size = Math.random() * 6 + 11;
+                    this.speed = Math.random() * 0.16 + 0.06;
+                    this.swayOffset = Math.random() * Math.PI * 2;
+                    this.opacity = Math.random() * 0.16 + 0.07;
+                }
+
+                update() {
+                    this.y -= this.speed;
+                    this.x += Math.sin(Date.now() / 1800 + this.swayOffset) * 0.15;
+                    if (this.y < -20) this.reset(false);
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.font = `${this.size}px 'Courier New', monospace`;
+                    ctx.fillStyle = `rgba(0, 173, 181, ${this.opacity})`;
+                    ctx.fillText(this.text, this.x, this.y);
+                    ctx.restore();
+                }
+            }
+            for (let i = 0; i < glyphCount; i++) glyphParticles.push(new GlyphParticle());
+
+            // ---- Comet streaks crossing the hero (a few at a time, staggered) ----
+            const comets = [];
+            const maxComets = 2;
+            function maybeSpawnComet() {
+                if (comets.length < maxComets && Math.random() < 0.0035) {
+                    const fromLeft = Math.random() > 0.5;
+                    const cool = Math.random() > 0.5;
+                    comets.push({
+                        x: fromLeft ? -60 : width + 60,
+                        y: Math.random() * height * 0.6,
+                        vx: (fromLeft ? 1 : -1) * (Math.random() * 3 + 4),
+                        vy: Math.random() * 1.4 + 0.7,
+                        life: 1,
+                        color: cool ? '0, 217, 192' : '120, 190, 255'
+                    });
+                }
+            }
+            function updateDrawComets() {
+                for (let i = comets.length - 1; i >= 0; i--) {
+                    const c = comets[i];
+                    c.x += c.vx;
+                    c.y += c.vy;
+                    c.life -= 0.014;
+
+                    ctx.save();
+                    ctx.strokeStyle = `rgba(${c.color}, ${Math.max(c.life, 0)})`;
+                    ctx.lineWidth = 1.5;
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = `rgb(${c.color})`;
+                    ctx.beginPath();
+                    ctx.moveTo(c.x, c.y);
+                    ctx.lineTo(c.x - c.vx * 6, c.y - c.vy * 6);
+                    ctx.stroke();
+                    // bright head
+                    ctx.fillStyle = `rgba(${c.color}, ${Math.max(c.life, 0)})`;
+                    ctx.beginPath();
+                    ctx.arc(c.x, c.y, 1.6, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+
+                    if (c.life <= 0 || c.x < -120 || c.x > width + 120) comets.splice(i, 1);
+                }
+            }
+
+            // ---- Soft twinkling stars scattered behind the text ----
+            const twinkles = [];
+            const twinkleCount = 16;
+            class Twinkle {
+                constructor() { this.reset(); }
+                reset() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.size = Math.random() * 1.4 + 0.6;
+                    this.phase = Math.random() * Math.PI * 2;
+                    this.speed = Math.random() * 0.015 + 0.008;
+                }
+                draw() {
+                    const glow = (Math.sin(Date.now() * this.speed + this.phase) + 1) / 2;
+                    ctx.save();
+                    ctx.fillStyle = `rgba(255, 255, 255, ${0.08 + glow * 0.35})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+            for (let i = 0; i < twinkleCount; i++) twinkles.push(new Twinkle());
+
+            // ---- One slow-drifting glow orb for ambient depth ----
+            const glowOrb = {
+                x: Math.random() * width,
+                y: Math.random() * height * 0.5,
+                vx: (Math.random() - 0.5) * 0.12,
+                vy: (Math.random() - 0.5) * 0.08,
+                radius: Math.max(width, height) * 0.22
+            };
+            function updateDrawOrb() {
+                glowOrb.x += glowOrb.vx;
+                glowOrb.y += glowOrb.vy;
+                if (glowOrb.x < 0 || glowOrb.x > width) glowOrb.vx *= -1;
+                if (glowOrb.y < 0 || glowOrb.y > height * 0.6) glowOrb.vy *= -1;
+
+                const pulse = (Math.sin(Date.now() / 2600) + 1) / 2;
+                const grad = ctx.createRadialGradient(
+                    glowOrb.x, glowOrb.y, 0,
+                    glowOrb.x, glowOrb.y, glowOrb.radius
+                );
+                grad.addColorStop(0, `rgba(0, 173, 181, ${0.05 + pulse * 0.03})`);
+                grad.addColorStop(1, 'rgba(0, 173, 181, 0)');
+                ctx.save();
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, width, height);
+                ctx.restore();
+            }
+
+            let mouseX = null, mouseY = null;
+
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouseX = e.clientX - rect.left;
+                mouseY = e.clientY - rect.top;
+            });
+            
+            canvas.addEventListener('mouseleave', () => {
+                mouseX = null;
+                mouseY = null;
+            });
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, width, height);
+
+                // Ambient orb sits furthest back
+                updateDrawOrb();
+
+                // Twinkling stars behind the main particle layer
+                twinkles.forEach(t => t.draw());
+                
+                // Subtle grid lines (terminal vibe)
+                ctx.strokeStyle = 'rgba(0, 173, 181, 0.06)';
+                ctx.lineWidth = 1;
+                for (let x = 40; x < width; x += 80) {
+                    ctx.beginPath();
+                    ctx.moveTo(x, 0);
+                    ctx.lineTo(x, height);
+                    ctx.stroke();
+                }
+                
+                particles.forEach(p => {
+                    p.update(mouseX, mouseY);
+                    p.draw();
+                    
+                    // Connect nearby particles
+                    particles.forEach(other => {
+                        const dx = p.x - other.x;
+                        const dy = p.y - other.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < 110 && dist > 0) {
+                            ctx.strokeStyle = `rgba(0, 173, 181, ${0.12 * (1 - dist / 110)})`;
+                            ctx.lineWidth = 0.8;
+                            ctx.beginPath();
+                            ctx.moveTo(p.x, p.y);
+                            ctx.lineTo(other.x, other.y);
+                            ctx.stroke();
+                        }
+                    });
+                });
+                
+                glyphParticles.forEach(g => {
+                    g.update();
+                    g.draw();
+                });
+
+                maybeSpawnComet();
+                updateDrawComets();
+                
+                requestAnimationFrame(animateParticles);
+            }
+            
+            animateParticles();
+        }
+
+        // ============================================
+        // 3. HERO TEXT STAGGER + SCROLL INDICATOR
+        // ============================================
+        function initHeroAnimations() {
+            const header = document.querySelector('header');
+            const h1 = header.querySelector('h1');
+            const p = header.querySelector('p');
+            const scrollInd = document.querySelector('.scroll-indicator');
+
+            splitHeroText(h1, p);
+
+            // Stagger reveal
+            if (gsapLoaded) {
+                gsap.fromTo(h1, 
+                    { opacity: 0, y: 50 }, 
+                    { opacity: 1, y: 0, duration: 1.1, ease: "power3.out", delay: 0.3 }
+                );
+                
+                gsap.fromTo(p, 
+                    { opacity: 0, y: 30 }, 
+                    { opacity: 1, y: 0, duration: 1.0, ease: "power2.out", delay: 0.85 }
+                );
+            } else {
+                h1.style.transition = 'all 1.1s cubic-bezier(0.23, 1.0, 0.32, 1)';
+                p.style.transition = 'all 1.0s cubic-bezier(0.23, 1.0, 0.32, 1)';
+                h1.style.opacity = '1';
+                p.style.opacity = '1';
+            }
+
+            // Scroll indicator animation
+            if (scrollInd) {
+                gsapLoaded ? gsap.to(scrollInd, { y: 12, duration: 1.8, repeat: -1, yoyo: true, ease: "sine.inOut" }) : 
+                    scrollInd.style.animation = 'scrollBounce 1.8s infinite alternate ease-in-out';
+            }
+
+            // Subtle canvas-only interaction already handled in particles.
+            // Removed direct transform on .hero-content to eliminate text jitter.
+        }
+
+        // ============================================
+        // 3b. HERO TEXT INTERACTIVITY — per-letter & per-word
+        // ============================================
+        function splitHeroText(h1, p) {
+            if (!h1 || h1.dataset.split === 'true') return;
+
+            let letterIndex = 0;
+
+            function processNode(node) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const frag = document.createDocumentFragment();
+                    Array.from(node.textContent).forEach((ch) => {
+                        const span = document.createElement('span');
+                        if (ch === ' ') {
+                            span.className = 'hero-letter hero-space';
+                            span.innerHTML = '&nbsp;';
+                        } else {
+                            span.className = 'hero-letter';
+                            span.textContent = ch;
+                        }
+                        span.style.animationDelay = (letterIndex * 0.035) + 's';
+                        letterIndex++;
+                        frag.appendChild(span);
+                    });
+                    return frag;
+                }
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    const clone = node.cloneNode(false);
+                    Array.from(node.childNodes).forEach((child) => {
+                        clone.appendChild(processNode(child));
+                    });
+                    return clone;
+                }
+                return document.createDocumentFragment();
+            }
+
+            const h1Frag = document.createDocumentFragment();
+            Array.from(h1.childNodes).forEach((node) => h1Frag.appendChild(processNode(node)));
+            h1.innerHTML = '';
+            h1.appendChild(h1Frag);
+            h1.dataset.split = 'true';
+
+            // Playful hover: pop, glow and a small random tilt per letter
+            h1.querySelectorAll('.hero-letter:not(.hero-space)').forEach((letter) => {
+                letter.addEventListener('mouseenter', () => {
+                    const rot = (Math.random() - 0.5) * 18;
+                    letter.style.setProperty('--rot', rot + 'deg');
+                });
+            });
+
+            // Paragraph: split into words only — a lighter touch so the
+            // supporting line stays readable and doesn't feel busy
+            if (p && p.dataset.split !== 'true') {
+                const words = p.textContent.split(' ');
+                p.innerHTML = words
+                    .map((w, i) => `<span class="hero-word" style="animation-delay:${i * 0.05}s">${w}</span>`)
+                    .join(' ');
+                p.dataset.split = 'true';
+            }
+        }
+
+        // ============================================
+        // 4. PREMIUM NAVIGATION
+        // ============================================
+        function initNavigation() {
+            const nav = document.querySelector('nav');
+            const progressBar = document.querySelector('.scroll-progress');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinksContainer = document.querySelector('.nav-links');
+
+            // Scroll progress
+            function updateProgress() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = `${progress}%`;
+            }
+            window.addEventListener('scroll', updateProgress);
+
+            // Sticky + shrink + blur nav
+            let lastScrollY = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                
+                if (currentScroll > 80) {
+                    nav.classList.add('nav-scrolled');
+                } else {
+                    nav.classList.remove('nav-scrolled');
+                }
+                
+                lastScrollY = currentScroll;
+                updateProgress();
+            });
+
+            // Smooth scroll
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    
+                    if (target) {
+                        const navHeight = nav.offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        navLinksContainer.classList.remove('active');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            });
+
+            // Scrollspy (active link)
+            const sections = ['about', 'projects', 'contact'];
+            
+            function updateActiveLink() {
+                let current = '';
+                const scrollPosition = window.scrollY + 180;
+
+                sections.forEach(id => {
+                    const section = document.getElementById(id);
+                    if (section && scrollPosition >= section.offsetTop) {
+                        current = id;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink();
+
+            // Mobile hamburger
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinksContainer.classList.toggle('active');
+            });
+
+            // Close mobile menu on link click
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinksContainer.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+        }
+
+        // ============================================
+        // 5. 3D TILT CARDS + ADVANCED PROJECT INTERACTIONS
+        // ============================================
+        function initProjectCards() {
+            const cards = document.querySelectorAll('.project-card');
+            
+            cards.forEach((card, index) => {
+                // Staggered entrance animation
+                if (gsapLoaded) {
+                    gsap.fromTo(card, 
+                        { opacity: 0, y: 70, rotateX: 15 },
+                        { 
+                            opacity: 1, 
+                            y: 0, 
+                            rotateX: 0, 
+                            duration: 1.0, 
+                            ease: "power3.out",
+                            delay: 0.15 * index 
+                        }
+                    );
+                } else {
+                    card.style.transition = `all 0.6s cubic-bezier(0.23, 1, 0.32, 1) ${0.15 * index}s`;
+                }
+
+                // True 3D tilt effect
+                card.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+                    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+                    
+                    const rotateX = -y * 26;
+                    const rotateY = x * 26;
+                    
+                    this.style.transition = 'transform 0.1s ease-out';
+                    this.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-20px) scale(1.03)`;
+                    
+                    // Dynamic glowing border
+                    const glowIntensity = Math.max(Math.abs(x), Math.abs(y)) * 0.5;
+                    this.style.boxShadow = `0 25px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(0,173,181,${0.35 + glowIntensity * 0.4})`;
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transition = 'transform 0.65s cubic-bezier(0.23, 1, 0.32, 1)';
+                    this.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+                    this.style.boxShadow = '';
+                });
+
+                // Click to open modal
+                const viewBtn = card.querySelector('.view-btn');
+                if (viewBtn) {
+                    viewBtn.addEventListener('click', function(e) {
+                        if (viewBtn.getAttribute('href') === '#') {
+                            e.preventDefault();
+                            const modalId = viewBtn.getAttribute('data-modal');
+                            openModal(modalId);
+                        }
+                    });
+                }
+            });
+        }
+
+        // ============================================
+        // 6. MODAL SYSTEM (elegant + cinematic)
+        // ============================================
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // GSAP cinematic entrance
+            const content = modal.querySelector('.modal-content');
+            if (gsapLoaded && content) {
+                gsap.fromTo(content, 
+                    { opacity: 0, y: 50, scale: 0.94 }, 
+                    { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "power3.out" }
+                );
+            }
+        }
+
+        function closeModal(modal) {
+            if (!modal) return;
+            
+            const content = modal.querySelector('.modal-content');
+            
+            if (gsapLoaded && content) {
+                gsap.to(content, {
+                    opacity: 0, y: 30, scale: 0.96,
+                    duration: 0.3,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                        content.style.opacity = '';
+                        content.style.transform = '';
+                    }
+                });
+            } else {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function initModals() {
+            // Open modals via data-modal (already handled in project cards)
+            
+            // Close buttons
+            document.querySelectorAll('.modal-close').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const modal = btn.closest('.modal');
+                    closeModal(modal);
+                });
+            });
+            
+            // Click outside to close
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            });
+
+            // Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    const activeModal = document.querySelector('.modal.active');
+                    if (activeModal) closeModal(activeModal);
+                }
+            });
+
+            // Project 1 copy button
+            const copyBtn = document.querySelector('#modal-project1 .copy-code-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    const code = document.querySelector('#modal-project1 code').innerText;
+                    navigator.clipboard.writeText(code).then(() => {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = 'Copied!';
+                        copyBtn.style.background = '#00adb5';
+                        copyBtn.style.color = '#1a1a1a';
+                        
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                            copyBtn.style.background = '';
+                            copyBtn.style.color = '';
+                        }, 1800);
+                    });
+                });
+            }
+        }
+
+        // ============================================
+        // 7. ROCK PAPER SCISSORS GAME
+        // ============================================
+        function initRPSGame() {
+            const modal = document.getElementById('modal-rps');
+            if (!modal) return;
+
+            const playerScoreEl = document.getElementById('player-score');
+            const aiScoreEl = document.getElementById('ai-score');
+            const resultEl = document.getElementById('rps-result');
+            const buttons = modal.querySelectorAll('.rps-btn');
+            const resetBtn = modal.querySelector('.rps-reset');
+
+            let playerScore = 0;
+            let aiScore = 0;
+
+            const choices = ['rock', 'paper', 'scissors'];
+            const emojis = { rock: '✊', paper: '✋', scissors: '✌️' };
+
+            function getAIChoice() {
+                return choices[Math.floor(Math.random() * choices.length)];
+            }
+
+            function determineWinner(player, ai) {
+                if (player === ai) return 'draw';
+                if (
+                    (player === 'rock' && ai === 'scissors') ||
+                    (player === 'paper' && ai === 'rock') ||
+                    (player === 'scissors' && ai === 'paper')
+                ) return 'win';
+                return 'lose';
+            }
+
+            function playGame(playerChoice) {
+                const aiChoice = getAIChoice();
+                const outcome = determineWinner(playerChoice, aiChoice);
+
+                // Animate result
+                resultEl.style.transition = 'none';
+                resultEl.style.opacity = '0';
+                
+                setTimeout(() => {
+                    resultEl.style.transition = 'all 0.3s ease';
+                    resultEl.style.opacity = '1';
+                    
+                    if (outcome === 'win') {
+                        playerScore++;
+                        resultEl.innerHTML = `You win! ${emojis[playerChoice]} beats ${emojis[aiChoice]}`;
+                        resultEl.style.color = '#00adb5';
+                        createParticleBurst(resultEl);
+                    } else if (outcome === 'lose') {
+                        aiScore++;
+                        resultEl.innerHTML = `AI wins! ${emojis[aiChoice]} beats ${emojis[playerChoice]}`;
+                        resultEl.style.color = '#ff6b6b';
+                    } else {
+                        resultEl.innerHTML = `Draw! Both chose ${emojis[playerChoice]}`;
+                        resultEl.style.color = '#ccc';
+                    }
+                    
+                    playerScoreEl.textContent = playerScore;
+                    aiScoreEl.textContent = aiScore;
+                }, 60);
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const choice = btn.dataset.choice;
+                    playGame(choice);
+                    
+                    // Nice button press feedback
+                    btn.style.transform = 'scale(0.88)';
+                    setTimeout(() => {
+                        btn.style.transform = '';
+                    }, 180);
+                });
+            });
+
+            resetBtn.addEventListener('click', () => {
+                playerScore = 0;
+                aiScore = 0;
+                playerScoreEl.textContent = '0';
+                aiScoreEl.textContent = '0';
+                resultEl.innerHTML = 'Choose your move';
+                resultEl.style.color = '#fff';
+            });
+
+            // Reset when modal opens
+            modal.addEventListener('click', function handler(e) {
+                if (e.target.classList.contains('modal') || e.target.classList.contains('modal-close')) {
+                    // Reset game when closed
+                    setTimeout(() => {
+                        playerScore = 0; aiScore = 0;
+                        playerScoreEl.textContent = '0';
+                        aiScoreEl.textContent = '0';
+                        resultEl.innerHTML = 'Choose your move';
+                        resultEl.style.color = '#fff';
+                    }, 400);
+                    modal.removeEventListener('click', handler);
+                }
+            });
+        }
+
+        // Particle burst helper for RPS
+        function createParticleBurst(element) {
+            const rect = element.getBoundingClientRect();
+            const container = document.createElement('div');
+            container.style.position = 'absolute';
+            container.style.left = rect.left + 'px';
+            container.style.top = rect.top + 'px';
+            container.style.pointerEvents = 'none';
+            container.style.zIndex = '9999';
+            document.body.appendChild(container);
+
+            for (let i = 0; i < 18; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = '6px';
+                particle.style.height = '6px';
+                particle.style.background = '#00adb5';
+                particle.style.borderRadius = '50%';
+                particle.style.left = Math.random() * rect.width + 'px';
+                particle.style.top = Math.random() * rect.height + 'px';
+                
+                container.appendChild(particle);
+
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 1.6 + Math.random() * 2.2;
+                const xVel = Math.cos(angle) * velocity;
+                const yVel = Math.sin(angle) * velocity - 1.3;
+
+                let x = 0, y = 0;
+                let opacity = 1;
+
+                const interval = setInterval(() => {
+                    x += xVel;
+                    y += yVel;
+                    opacity -= 0.06;
+                    
+                    particle.style.transform = `translate(${x}px, ${y}px)`;
+                    particle.style.opacity = opacity;
+
+                    if (opacity <= 0) {
+                        clearInterval(interval);
+                        particle.remove();
+                        if (container.children.length === 0) container.remove();
+                    }
+                }, 1000 / 60);
+            }
+        }
+
+        // ============================================
+        // 8. PYTHON CALCULATOR (eval style)
+        // ============================================
+        function initCalculator() {
+            const modal = document.getElementById('modal-calculator');
+            if (!modal) return;
+
+            const display = document.getElementById('calc-display');
+            const buttons = modal.querySelectorAll('.calc-btn');
+            
+            let currentInput = '0';
+            let previousInput = '';
+            let operator = null;
+            let shouldReset = false;
+
+            function updateDisplay() {
+                display.textContent = currentInput;
+            }
+
+            function handleInput(value) {
+                if (value === 'C') {
+                    currentInput = '0';
+                    previousInput = '';
+                    operator = null;
+                } else if (value === 'back') {
+                    currentInput = currentInput.length > 1 ? currentInput.slice(0, -1) : '0';
+                } else if (value === '=') {
+                    if (operator && previousInput) {
+                        try {
+                            // Safe eval simulation (mimics Python eval)
+                            const expression = previousInput + operator + currentInput;
+                            // Using Function for safer eval
+                            const result = Function('"use strict"; return (' + expression + ')')();
+                            
+                            currentInput = Number.isFinite(result) ? result.toString() : 'Error';
+                            operator = null;
+                            previousInput = '';
+                            shouldReset = true;
+                        } catch (e) {
+                            currentInput = 'Error';
+                        }
+                    }
+                } else if (['+', '-', '*', '/'].includes(value)) {
+                    if (operator && !shouldReset) {
+                        // Chain operations
+                        try {
+                            const expression = previousInput + operator + currentInput;
+                            const result = Function('"use strict"; return (' + expression + ')')();
+                            previousInput = Number.isFinite(result) ? result.toString() : '0';
+                        } catch (e) {
+                            previousInput = currentInput;
+                        }
+                    } else {
+                        previousInput = currentInput;
+                    }
+                    operator = value;
+                    shouldReset = true;
+                } else {
+                    if (shouldReset) {
+                        currentInput = '';
+                        shouldReset = false;
+                    }
+                    if (currentInput === '0' && value !== '.') {
+                        currentInput = value;
+                    } else if (currentInput.length < 12) {
+                        currentInput += value;
+                    }
+                }
+                updateDisplay();
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const val = btn.dataset.value;
+                    handleInput(val);
+                    
+                    // Beautiful press animation
+                    btn.style.transform = 'scale(0.85)';
+                    setTimeout(() => {
+                        btn.style.transform = '';
+                    }, 120);
+                });
+            });
+
+            // Keyboard support
+            document.addEventListener('keydown', function(e) {
+                if (!modal.classList.contains('active')) return;
+                
+                if (e.key === 'Escape') {
+                    const closeBtn = modal.querySelector('.modal-close');
+                    if (closeBtn) closeBtn.click();
+                } else if (e.key === 'Enter' || e.key === '=') {
+                    e.preventDefault();
+                    handleInput('=');
+                } else if (e.key === 'Backspace') {
+                    handleInput('back');
+                } else if (['0','1','2','3','4','5','6','7','8','9','.'].includes(e.key)) {
+                    handleInput(e.key);
+                } else if (['+','-','*','/'].includes(e.key)) {
+                    handleInput(e.key);
+                }
+            });
+
+            // Reset calculator when modal closes
+            modal.addEventListener('click', function handler(e) {
+                if (e.target === modal || e.target.classList.contains('modal-close')) {
+                    setTimeout(() => {
+                        currentInput = '0';
+                        previousInput = '';
+                        operator = null;
+                        shouldReset = false;
+                        updateDisplay();
+                    }, 350);
+                    modal.removeEventListener('click', handler);
+                }
+            });
+        }
+
+        // ============================================
+        // 9. COPY EMAIL + PARTICLE TOAST
+        // ============================================
+        function initContactInteractions() {
+            const emailLink = document.querySelector('.copy-email');
+            if (!emailLink) return;
+
+            emailLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const email = this.dataset.email;
+                
+                navigator.clipboard.writeText(email).then(() => {
+                    const originalText = this.textContent;
+                    this.textContent = 'Copied!';
+                    this.style.color = '#00adb5';
+                    
+                    // Particle burst around email
+                    createParticleBurst(this);
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.color = '';
+                    }, 2000);
+                });
+            });
+
+            // Premium animated contact form
+            const form = document.querySelector('.contact-form');
+            const submitBtn = document.querySelector('.form-submit');
+            
+            if (submitBtn) {
+                submitBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = 'Message Sent ✓';
+                        submitBtn.style.background = '#00adb5';
+                        submitBtn.style.color = '#1a1a1a';
+                        
+                        // Create nice success particles
+                        createParticleBurst(submitBtn);
+                        
+                        setTimeout(() => {
+                            submitBtn.textContent = originalText;
+                            submitBtn.style.background = '';
+                            submitBtn.style.color = '';
+                            submitBtn.disabled = false;
+                            
+                            // Clear inputs
+                            form.querySelectorAll('.form-input').forEach(input => input.value = '');
+                        }, 2200);
+                    }, 1150);
+                });
+            }
+        }
+
+        // ============================================
+        // 10. SCROLL TRIGGERED STAGGER + FINAL TOUCHES
+        // ============================================
+        function initScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        
+                        if (el.classList.contains('project-card')) {
+                            // Already handled with GSAP in initProjectCards
+                        }
+                        
+                        if (el.id === 'contact') {
+                            if (gsapLoaded) {
+                                gsap.fromTo(el.querySelectorAll('h2, .email-wrapper, .contact-form'), 
+                                    { opacity: 0, y: 30 },
+                                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.12, ease: "power2.out" }
+                                );
+                            }
+                        }
+                        
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Observe sections and cards
+            document.querySelectorAll('#projects, #contact').forEach(el => observer.observe(el));
+            
+            // Additional footer polish
+            const footer = document.querySelector('footer');
+            if (footer) observer.observe(footer);
+        }
+
+        // ============================================
+        // 11. ACCESSIBILITY + PERFORMANCE
+        // ============================================
+        function initAccessibility() {
+            // Respect reduced motion
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.style.setProperty('--transition-speed', '0.1s');
+            }
+            
+            // Keyboard focus visibility
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Tab') {
+                    document.body.classList.add('keyboard-nav');
+                }
+            });
+            
+            document.addEventListener('mousedown', () => {
+                document.body.classList.remove('keyboard-nav');
+            });
+        }
+
+        // ============================================
+        // BOOT EVERYTHING
+        // ============================================
+        function initPortfolio() {
+            // Core systems
+            initCustomCursor();
+            initHeroParticles();
+            initHeroAnimations();
+            initNavigation();
+            initProjectCards();
+            initModals();
+            initRPSGame();
+            initCalculator();
+            initContactInteractions();
+            initScrollAnimations();
+            initAccessibility();
+
+            // Final polish: subtle body glow on scroll
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                document.body.classList.add('scrolling');
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    document.body.classList.remove('scrolling');
+                }, 800);
+            });
+
+            // Easter egg: Konami code (for fun)
+            let konamiCode = [];
+            const konami = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+            
+            document.addEventListener('keydown', (e) => {
+                konamiCode.push(e.key);
+                if (konamiCode.length > konami.length) konamiCode.shift();
+                
+                if (konamiCode.join(',') === konami.join(',')) {
+                    document.body.style.transition = 'filter 1.6s';
+                    document.body.style.filter = 'hue-rotate(42deg) saturate(1.4)';
+                    setTimeout(() => {
+                        document.body.style.filter = '';
+                    }, 2200);
+                    konamiCode = [];
+                }
+            });
+
+            console.log('%c[Portfolio] Teddy Indetie — Ultra-premium interactive experience ready.', 'color:#00adb5');
+        }
+
+        // Start everything when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPortfolio);
+        } else {
+            initPortfolio();
+        }
+    </script>
+
+    <!-- Extra "next level" interactivity: mouse trail, click burst, magnetic nav, spotlight, tilt -->
+    <script src="effects.js"></script>
+    <script src="ui-sounds.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>

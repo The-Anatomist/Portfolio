@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One - Details</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra premium styles only for this page */
+        .project-header {
+            padding: 2.5rem 10% 1.5rem;
+            background: linear-gradient(to bottom, #111, #1a1a1a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .project-header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: #00adb5;
+            transform: translateX(-4px);
+        }
+        
+        .live-demo {
+            margin-top: 2.5rem;
+            padding: 1.75rem;
+            background: #111;
+            border-radius: 14px;
+            border: 1px solid #222;
+        }
+        
+        .demo-title {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #00adb5;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .demo-box {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: 1px solid #333;
+        }
+        
+        .demo-output {
+            font-family: monospace;
+            background: #0f0f0f;
+            padding: 18px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00adb5;
+            border: 1px solid #222;
+        }
+        
+        .interactive-tag {
+            display: inline-block;
+            background: #00adb5;
+            color: #1a1a1a;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            margin: 0.5rem;
+        }
+        
+        .interactive-tag:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 0 4px rgba(0,173,181,0.25);
+        }
+        
+        .code-preview {
+            background: #111;
+            padding: 1.25rem;
+            border-radius: 10px;
+            font-family: monospace;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border-left: 4px solid #00adb5;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Teddy Indetie</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">← Back to Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <canvas class="project-header-canvas" id="project-hero-canvas"></canvas>
+        <div class="project-header-content">
+            <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            <h1>Project <span class="highlight">One</span></h1>
+            <p>A deep dive into making my portfolio.</p>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Project Overview</h2>
+        
+        <div class="project-card" data-tilt style="max-width: 860px; margin: 2rem auto;">
+            <p>This project was my first step into the world of coding. It shows a bit of my html code.</p>
+            
+            <h3 style="margin-top: 2rem;">Source Code Snippet</h3>
+            
+            <div class="code-preview">
+                &lt;h1&gt;Hi, I'm &lt;span class="highlight"&gt;Teddy Indetie&lt;/span&gt;&lt;/h1&gt;<br>
+                &lt;p&gt;A passionate python enthusiast building simple and functional projects.&lt;/p&gt;
+            </div>
+            
+            <button class="view-btn" id="copy-snippet-btn" style="margin-top: 1rem;">Copy Code Snippet</button>
+            
+            <h3 style="margin-top: 2.5rem;">Project Screenshot</h3>
+            
+            <div class="image-container">
+                <img src="image.PNG" alt="Screenshot of Project One" class="project-img" id="project-screenshot">
+            </div>
+            
+            <!-- LIVE INTERACTIVE ELEMENT -->
+            <div class="live-demo">
+                <div class="demo-title">
+                    <span>🧪 LIVE DEMO</span>
+                    <span style="font-size:0.75rem; opacity:0.6;">— Interactive HTML tag</span>
+                </div>
+                
+                <p style="opacity:0.8; font-size:0.95rem;">Click the tag below to toggle a live preview of the highlight effect:</p>
+                
+                <div style="margin: 1rem 0;">
+                    <span class="interactive-tag" id="interactive-tag">&lt;span class="highlight"&gt;Teddy Indetie&lt;/span&gt;</span>
+                </div>
+                
+                <div class="demo-box">
+                    <div class="demo-output" id="demo-output">
+                        Hi, I'm <span id="live-highlight">Teddy Indetie</span>
+                    </div>
+                    <div style="font-size:0.8rem; opacity:0.6; text-align:center;">Live preview updates instantly</div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Teddy Indetie</p>
+    </footer>
+
+    <script>
+        // ============================================
+        // PROJECT ONE PAGE — ENHANCED INTERACTIONS
+        // ============================================
+
+        function initProjectOnePage() {
+            // 1. Copy snippet button
+            const copyBtn = document.getElementById('copy-snippet-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    const snippet = `&lt;h1&gt;Hi, I'm &lt;span class="highlight"&gt;Teddy Indetie&lt;/span&gt;&lt;/h1&gt;\n&lt;p&gt;A passionate python enthusiast building simple and functional projects.&lt;/p&gt;`;
+                    
+                    navigator.clipboard.writeText(snippet).then(() => {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = 'Copied!';
+                        copyBtn.style.background = '#00adb5';
+                        copyBtn.style.color = '#1a1a1a';
+                        
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                            copyBtn.style.background = '';
+                            copyBtn.style.color = '';
+                        }, 1800);
+                    });
+                });
+            }
+
+            // 2. Interactive screenshot — hover zoom + tilt
+            const img = document.getElementById('project-screenshot');
+            if (img) {
+                img.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
+                    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 14;
+                    
+                    this.style.transform = `perspective(900px) rotateX(${-y}deg) rotateY(${x}deg) scale(1.035)`;
+                    this.style.boxShadow = `0 35px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,173,181,0.3)`;
+                });
+                
+                img.addEventListener('mouseleave', function() {
+                    this.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s';
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+                
+                // Click to zoom reset
+                img.addEventListener('click', function() {
+                    this.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                    this.style.transform = 'scale(1.08)';
+                    
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 750);
+                });
+            }
+
+            // 3. Interactive live HTML tag demo
+            const tag = document.getElementById('interactive-tag');
+            const liveHighlight = document.getElementById('live-highlight');
+            
+            if (tag && liveHighlight) {
+                let isHighlighted = true;
+                
+                tag.addEventListener('click', () => {
+                    isHighlighted = !isHighlighted;
+                    
+                    if (isHighlighted) {
+                        liveHighlight.style.color = '#00adb5';
+                        liveHighlight.style.transition = 'color 0.25s ease';
+                        tag.style.background = '#00adb5';
+                        tag.style.color = '#1a1a1a';
+                    } else {
+                        liveHighlight.style.color = '#ffffff';
+                        tag.style.background = '#333';
+                        tag.style.color = '#00adb5';
+                    }
+                    
+                    // Nice scale feedback
+                    tag.style.transform = 'scale(0.94)';
+                    setTimeout(() => {
+                        tag.style.transform = 'scale(1)';
+                    }, 120);
+                });
+                
+                // Initial state
+                liveHighlight.style.color = '#00adb5';
+            }
+
+            // 4. Premium back button smooth transition (already styled)
+            // 5. Keyboard accessibility
+            document.addEventListener('keydown', function(e) {
+                if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                    e.preventDefault();
+                    const tagEl = document.getElementById('interactive-tag');
+                    if (tagEl) tagEl.click();
+                }
+            });
+
+            // 6. Subtle scroll-triggered animation for the card
+            const projectCard = document.querySelector('#projects .project-card');
+            if (projectCard) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            projectCard.style.transition = 'all 0.9s cubic-bezier(0.23, 1, 0.32, 1)';
+                            projectCard.style.opacity = '1';
+                            projectCard.style.transform = 'translateY(0)';
+                            observer.disconnect();
+                        }
+                    });
+                }, { threshold: 0.2 });
+                
+                projectCard.style.opacity = '0.3';
+                projectCard.style.transform = 'translateY(30px)';
+                observer.observe(projectCard);
+            }
+
+            console.log('%c[Project One] Enhanced page loaded with interactive elements.', 'color:#00adb5');
+        }
+
+        // Boot script
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initProjectOnePage);
+        } else {
+            initProjectOnePage();
+        }
+    </script>
+
+    <!-- Extra "next level" interactivity: mouse trail, click burst, magnetic nav, spotlight, tilt -->
+    <script src="effects.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1c9c3a34a4b97ee',t:'MTc4NDI5NjczNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script src="ui-sounds.js"></script>
+<script src="audio-player.js"></script>
+</html>

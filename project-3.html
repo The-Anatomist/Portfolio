@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Three - Details</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra premium styles only for this page */
+        .project-header {
+            padding: 2.5rem 10% 1.5rem;
+            background: linear-gradient(to bottom, #111, #1a1a1a);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .project-header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            color: #00adb5;
+            transform: translateX(-4px);
+        }
+        
+        .live-demo {
+            margin-top: 2.5rem;
+            padding: 1.75rem;
+            background: #111;
+            border-radius: 14px;
+            border: 1px solid #222;
+        }
+        
+        .demo-title {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #00adb5;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .demo-box {
+            background: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border: 1px solid #333;
+        }
+        
+        .code-preview {
+            background: #111;
+            padding: 1.25rem;
+            border-radius: 10px;
+            font-family: monospace;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            border-left: 4px solid #00adb5;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Teddy Indetie</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">← Back to Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <canvas class="project-header-canvas" id="project-hero-canvas"></canvas>
+        <div class="project-header-content">
+            <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            <h1>Project <span class="highlight">Three</span></h1>
+            <p>A simple calculator built in Python using the eval() function.</p>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Project Overview</h2>
+        
+        <div class="project-card" data-tilt style="max-width: 860px; margin: 2rem auto;">
+            <p>This project is a calculator I originally built in Python, using the built-in eval() function to evaluate expressions typed in by the user. The live demo below ports the same idea to JavaScript, safely evaluating the expression you build with the buttons.</p>
+            
+            <h3 style="margin-top: 2rem;">Source Code Snippet</h3>
+            
+            <div class="code-preview">def calculate(expression):
+    try:
+        return eval(expression)
+    except Exception:
+        return "Error"
+
+expression = input("Enter expression: ")
+print(calculate(expression))</div>
+            
+            <button class="view-btn" id="copy-snippet-btn" style="margin-top: 1rem;">Copy Code Snippet</button>
+            
+            <h3 style="margin-top: 2.5rem;">Project Screenshot</h3>
+            
+            <div class="image-container">
+                <img src="image.PNG" alt="Screenshot of Project Three" class="project-img" id="project-screenshot">
+            </div>
+            
+            <!-- LIVE INTERACTIVE ELEMENT -->
+            <div class="live-demo">
+                <div class="demo-title">
+                    <span>🧪 LIVE DEMO</span>
+                    <span style="font-size:0.75rem; opacity:0.6;">— Powered by eval()</span>
+                </div>
+                
+                <p style="opacity:0.8; font-size:0.95rem;">Try the calculator below — same logic as the original Python version:</p>
+                
+                <div class="demo-box">
+                    <div class="calculator">
+                        <div class="calc-display" id="calc-display">0</div>
+                        <div class="calc-buttons">
+                            <button class="calc-btn" data-value="C">C</button>
+                            <button class="calc-btn" data-value="/">÷</button>
+                            <button class="calc-btn" data-value="*">×</button>
+                            <button class="calc-btn" data-value="-">−</button>
+                            
+                            <button class="calc-btn" data-value="7">7</button>
+                            <button class="calc-btn" data-value="8">8</button>
+                            <button class="calc-btn" data-value="9">9</button>
+                            <button class="calc-btn" data-value="+">+</button>
+                            
+                            <button class="calc-btn" data-value="4">4</button>
+                            <button class="calc-btn" data-value="5">5</button>
+                            <button class="calc-btn" data-value="6">6</button>
+                            <button class="calc-btn" data-value="=" style="grid-row: span 2;">=</button>
+                            
+                            <button class="calc-btn" data-value="1">1</button>
+                            <button class="calc-btn" data-value="2">2</button>
+                            <button class="calc-btn" data-value="3">3</button>
+                            
+                            <button class="calc-btn" data-value="0">0</button>
+                            <button class="calc-btn" data-value=".">.</button>
+                            <button class="calc-btn" data-value="back">⌫</button>
+                        </div>
+                        <div class="python-badge">Python eval() • Safe mode</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Teddy Indetie</p>
+    </footer>
+
+    <script>
+        // ============================================
+        // PROJECT THREE PAGE — ENHANCED INTERACTIONS
+        // ============================================
+
+        function initProjectThreePage() {
+            // 1. Copy snippet button
+            const copyBtn = document.getElementById('copy-snippet-btn');
+            if (copyBtn) {
+                copyBtn.addEventListener('click', () => {
+                    const snippet = document.querySelector('.code-preview').innerText;
+
+                    navigator.clipboard.writeText(snippet).then(() => {
+                        const originalText = copyBtn.textContent;
+                        copyBtn.textContent = 'Copied!';
+                        copyBtn.style.background = '#00adb5';
+                        copyBtn.style.color = '#1a1a1a';
+                        
+                        setTimeout(() => {
+                            copyBtn.textContent = originalText;
+                            copyBtn.style.background = '';
+                            copyBtn.style.color = '';
+                        }, 1800);
+                    });
+                });
+            }
+
+            // 2. Interactive screenshot — hover zoom + tilt
+            const img = document.getElementById('project-screenshot');
+            if (img) {
+                img.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
+                    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 14;
+                    
+                    this.style.transform = `perspective(900px) rotateX(${-y}deg) rotateY(${x}deg) scale(1.035)`;
+                    this.style.boxShadow = `0 35px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,173,181,0.3)`;
+                });
+                
+                img.addEventListener('mouseleave', function() {
+                    this.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s';
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+                
+                img.addEventListener('click', function() {
+                    this.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                    this.style.transform = 'scale(1.08)';
+                    
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 750);
+                });
+            }
+
+            // 3. Calculator logic (safe eval simulation)
+            const display = document.getElementById('calc-display');
+            const buttons = document.querySelectorAll('.calc-btn');
+            
+            let currentInput = '0';
+            let previousInput = '';
+            let operator = null;
+            let shouldReset = false;
+
+            function updateDisplay() {
+                display.textContent = currentInput;
+            }
+
+            function handleInput(value) {
+                if (value === 'C') {
+                    currentInput = '0';
+                    previousInput = '';
+                    operator = null;
+                } else if (value === 'back') {
+                    currentInput = currentInput.length > 1 ? currentInput.slice(0, -1) : '0';
+                } else if (value === '=') {
+                    if (operator && previousInput) {
+                        try {
+                            const expression = previousInput + operator + currentInput;
+                            const result = Function('"use strict"; return (' + expression + ')')();
+                            
+                            currentInput = Number.isFinite(result) ? result.toString() : 'Error';
+                            operator = null;
+                            previousInput = '';
+                            shouldReset = true;
+                        } catch (e) {
+                            currentInput = 'Error';
+                        }
+                    }
+                } else if (['+', '-', '*', '/'].includes(value)) {
+                    if (operator && !shouldReset) {
+                        try {
+                            const expression = previousInput + operator + currentInput;
+                            const result = Function('"use strict"; return (' + expression + ')')();
+                            previousInput = Number.isFinite(result) ? result.toString() : '0';
+                        } catch (e) {
+                            previousInput = currentInput;
+                        }
+                    } else {
+                        previousInput = currentInput;
+                    }
+                    operator = value;
+                    shouldReset = true;
+                } else {
+                    if (shouldReset) {
+                        currentInput = '';
+                        shouldReset = false;
+                    }
+                    if (currentInput === '0' && value !== '.') {
+                        currentInput = value;
+                    } else if (currentInput.length < 12) {
+                        currentInput += value;
+                    }
+                }
+                updateDisplay();
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const val = btn.dataset.value;
+                    handleInput(val);
+                    
+                    btn.style.transform = 'scale(0.85)';
+                    setTimeout(() => {
+                        btn.style.transform = '';
+                    }, 120);
+                });
+            });
+
+            // Keyboard support
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === '=') {
+                    e.preventDefault();
+                    handleInput('=');
+                } else if (e.key === 'Backspace') {
+                    handleInput('back');
+                } else if (['0','1','2','3','4','5','6','7','8','9','.'].includes(e.key)) {
+                    handleInput(e.key);
+                } else if (['+','-','*','/'].includes(e.key)) {
+                    handleInput(e.key);
+                }
+            });
+
+            // 4. Subtle scroll-triggered animation for the card
+            const projectCard = document.querySelector('#projects .project-card');
+            if (projectCard) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            projectCard.style.transition = 'all 0.9s cubic-bezier(0.23, 1, 0.32, 1)';
+                            projectCard.style.opacity = '1';
+                            projectCard.style.transform = 'translateY(0)';
+                            observer.disconnect();
+                        }
+                    });
+                }, { threshold: 0.2 });
+                
+                projectCard.style.opacity = '0.3';
+                projectCard.style.transform = 'translateY(30px)';
+                observer.observe(projectCard);
+            }
+
+            console.log('%c[Project Three] Enhanced page loaded with interactive elements.', 'color:#00adb5');
+        }
+
+        // Boot script
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initProjectThreePage);
+        } else {
+            initProjectThreePage();
+        }
+    </script>
+
+    <!-- Extra "next level" interactivity: mouse trail, click burst, magnetic nav, spotlight, tilt -->
+    <script src="effects.js"></script>
+    <script src="ui-sounds.js"></script>
+    <script src="audio-player.js"></script>
+</body>
+</html>
